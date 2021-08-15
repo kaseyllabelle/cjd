@@ -1,5 +1,4 @@
-header::after,
-.nav::after,
+h1::after,
 section:not(:last-of-type)::after
 {
   content: '';
@@ -8,21 +7,16 @@ section:not(:last-of-type)::after
   left: 0;
   display: block;
   width: 100%;
-  height: var(--space-xs);
+  height: var(--space-sm);
   background: var(--gradient-primary);
   background-size: 400% 400%;
-  -webkit-animation: animatedGradient 30s ease infinite;
+  /* -webkit-animation: animatedGradient 30s ease infinite;
   -moz-animation: animatedGradient 30s ease infinite;
   -o-animation: animatedGradient 30s ease infinite;
-  animation: animatedGradient 30s ease infinite;
+  animation: animatedGradient 30s ease infinite; */
 }
 
-section:not(:last-of-type)::after
-{
-  height: var(--space-sm);
-}
-
-@-webkit-keyframes animatedGradient
+/* @-webkit-keyframes animatedGradient
 {
   0% { background-position: 0% 50% }
   50% { background-position: 100% 50% }
@@ -48,4 +42,4 @@ section:not(:last-of-type)::after
   0% { background-position: 0% 50% }
   50% { background-position: 100% 50% }
   100% { background-position: 0% 50% }
-}
+} */

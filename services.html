@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/new.css">
     <link rel="stylesheet" href="styles/gradients.css">
-    <link rel="stylesheet" href="styles/typography.css">
-    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <title>Caitlin J. Doris Salon Services</title>
   </head>
   <body>
@@ -19,87 +18,96 @@
       <h1 class="neon">
         Caitlin J. Doris
       </h1>
+      <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta cta-assertive cta-sticky">Request a Consultation</a>
     </header>
-    <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta cta-assertive cta-sticky">Request a Consultation</a>
-    <nav class="nav">
-      <a href="index.html" class="nav-item">Home</a>
-      <a href="services.html" class="nav-item">Services</a>
-      <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
-      <a href="policies.html" class="nav-item">Policies</a>
-    </nav>
-    <section class="theme-light menu-services">
-      <h2>menu of services</h2>
-      <h3>hair</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th scope="row">
-              Cut
-            </th>
-            <td>
-              $$ - $$$, consultation required
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Single-process color
-            </th>
-            <td>
-              Starting at $$
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Double-process color
-            </th>
-            <td>
-              Starting at $$
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Extensions
-            </th>
-            <td>
-              Starting at $$ per hour
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>makeup</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th scope="row">
-              Full-face
-            </th>
-            <td>
-              $$ - $$$, consultation required
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Makeup lesson
-            </th>
-            <td>
-              $$ - $$$
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>bridal</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th scope="row">
-              Bridal hair & makeup
-            </th>
-            <td>
-              Starting at $$ per person, consultation required
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <details>
+      <summary aria-label="Toggle navigation">
+        <span>Menu</span>
+      </summary>
+      <nav class="nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="services.html" class="nav-item active">Services</a>
+        <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
+        <a href="policies.html" class="nav-item">Policies</a>
+      </nav>
+    </details>
+    <div class="main">
+      <main>
+        <section class="theme-light menu-services">
+          <h2>menu of services</h2>
+          <h3>hair</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Cut
+                </th>
+                <td>
+                  $$ - $$$, consultation required
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Single-process color
+                </th>
+                <td>
+                  Starting at $$
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Double-process color
+                </th>
+                <td>
+                  Starting at $$
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Extensions
+                </th>
+                <td>
+                  Starting at $$ per hour
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>makeup</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Full-face
+                </th>
+                <td>
+                  $$ - $$$, consultation required
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Makeup lesson
+                </th>
+                <td>
+                  $$ - $$$
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>bridal</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Bridal hair & makeup
+                </th>
+                <td>
+                  Starting at $$ per person, consultation required
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

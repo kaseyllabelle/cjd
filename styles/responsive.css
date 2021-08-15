@@ -1,0 +1,57 @@
+@media only screen and (min-width: 576px)
+{
+  .nav-item
+  {
+    font-size: var(--fs-2);
+    margin: var(--space-lg) 0;
+  }
+}
+
+@media only screen and (min-width: 768px)
+{
+  body
+  {
+    font-size: var(--fs-body-md);
+  }
+
+  h1
+  {
+    font-size: var(--fs-1);
+  }
+
+  details[open]
+  {
+    width: 40vw;
+  }
+
+  .nav-item
+  {
+    margin: var(--space-2x) 0;
+  }
+
+  .services
+  {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .cait
+  {
+    grid-template-columns: minmax(100px, 300px) minmax(auto, 600px);
+  }
+
+  .salon
+  {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 992px)
+{
+  details[open]
+  {
+    width: 30vw;
+  }
+}
