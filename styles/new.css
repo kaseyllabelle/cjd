@@ -21,7 +21,7 @@ body
   --space-4x: 2rem; /* 32 */
   --space-6x: 3rem; /* 48 */
   --space-8x: 4rem; /* 64 */
-  --space-12x: 6rem; /* 80 */
+  --space-12x: 6rem; /* 96 */
   --space-15x: 7.5rem; /* 120 */
 
   /* typography & type scale */
@@ -37,6 +37,11 @@ body
   --fs-body: 1em;
   --fs-body-md: 1.125em;
 
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  height: 100vh;
   margin: 0;
   padding-bottom: var(--space-4x);
   font-family: var(--font-family-body);
@@ -64,14 +69,61 @@ body
   outline-offset: var(--space-xs);
 }
 
-header
+p
 {
+  margin-top: var(--space-2x);
+  margin-bottom: 0;
+}
+
+.landing-page
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--space-6x));
   background-color: var(--noir);
-  background-image: url(../images/wallpaper.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url(../images/pattern.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 30%;
   z-index: 2;
+}
+
+.page-header
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: calc(100vh - var(--space-6x)); */
+  background-color: var(--noir);
+  background-image: url(../images/pattern.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 30%;
+  z-index: 2;
+}
+
+.overlay::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 3;
+}
+
+.logo
+{
+  z-index: 4;
 }
 
 h1
@@ -80,9 +132,11 @@ h1
   margin: 0;
   padding: var(--space-6x) 0;
   font-family: var(--font-family-logo);
-  font-size: var(--fs-2);
+  font-size: var(--fs-1);
   line-height: 1;
   text-align: center;
+  color: var(--clear);
+  z-index: 4;
 }
 
 .neon
@@ -98,14 +152,26 @@ h1
     0 0 var(--space-15x) var(--cupid);
 }
 
+.tagline
+{
+  display: block;
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+}
+
 h2
 {
-  margin: 0 0 var(--space-4x);
+  margin: 0;
   font-family: var(--font-family-heading);
   font-size: var(--fs-2);
   line-height: 1.2;
   text-transform: lowercase;
-  text-align: center;
+  /* text-align: center; */
+}
+
+h2:not(:nth-of-type(1))
+{
+  margin-top: var(--space-6x);
 }
 
 h3
@@ -137,7 +203,7 @@ details
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 3;
+  z-index: 10;
   text-align: center;
 }
 
@@ -153,6 +219,7 @@ summary
   text-align: center;
   cursor: pointer;
   background: var(--sorcery);
+  white-space: nowrap;
 }
 
 summary:focus
@@ -296,11 +363,11 @@ details:not([open]) summary ~ *
   bottom: 0;
   left: 0;
   border: 0;
-  padding: var(--space-lg);
+  padding: var(--space-2x);
   background: var(--gradient-primary);
   background-size: 400% 400%;
   color: var(--clear);
-  z-index: 2;
+  z-index: 4;
   -webkit-animation: animatedGradient 30s ease infinite;
   -moz-animation: animatedGradient 30s ease infinite;
   -o-animation: animatedGradient 30s ease infinite;
@@ -316,6 +383,7 @@ details:not([open]) summary ~ *
 table
 {
   width: 100%;
+  margin-top: var(--space-2x);
   border-spacing: 0;
   border-top: 0.063rem solid var(--noir);
   border-bottom: 0.063rem solid var(--noir);
@@ -356,11 +424,46 @@ tr > *:last-child
   padding-right: 0;
 }
 
-section
+.table-services
+{
+  margin-top: 0;
+  border: 0;
+}
+
+.table-services tr
+{
+  grid-template-columns: none;
+  grid-template-rows: auto;
+  margin-top: var(--space-md);
+}
+
+.table-services th,
+.table-services td
+{
+  border: 0;
+  padding: 0;
+}
+
+.table-services th
+{
+  margin-top: var(--space-md);
+}
+
+.table-services td
+{
+  margin-top: var(--space-sm);
+}
+
+.table-services th
+{
+  font-weight: var(--font-weight-assertive);
+}
+
+/* section
 {
   position: relative;
-  padding: var(--space-4x);
-}
+  /* padding: var(--space-6x);
+} */
 
 .theme-dark
 {
@@ -418,7 +521,7 @@ section
 
 .cait
 {
-  padding: var(--space-4x);
+  /* padding: var(--space-4x); */
 
   display: grid;
   /* grid-template-columns: minmax(100px, 300px) minmax(auto, 600px); */
@@ -483,13 +586,48 @@ section
 }
 
 .menu-services,
-.policies
+.policies,
+.main-content
 {
   display: grid;
   grid-template-columns: minmax(auto, 60ch);
   justify-content: center;
+  align-items: center;
 }
 
+.map
+{
+  width: 100%;
+  height: 400px;
+}
+
+.gta
+{
+  /* display: grid;
+  grid-template-areas: 
+    "location hours"
+    "contact hours"
+  ; */
+  /* grid-template-rows: 50px 1fr 30px; */
+  /* grid-template-columns: 150px 1fr; */
+}
+
+.location
+{
+  grid-area: location;
+}
+
+.hours
+{
+  grid-area: hours;
+  margin-top: var(--space-6x);
+}
+
+.contact
+{
+  grid-area: contact;
+  margin-top: var(--space-6x);
+}
 
 /*
   glow backlight https://codepen.io/georgehastings/pen/xgwxgo?editors=1100

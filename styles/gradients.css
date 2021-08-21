@@ -1,9 +1,25 @@
-h1::after,
-section:not(:last-of-type)::after
+main
+{
+  flex-grow: 1;
+  padding: var(--space-6x) var(--space-6x) var(--space-12x);
+  border-top-width: var(--space-sm);
+  border-top-style: solid;
+  border-image-slice: 1;
+  border-image-source: var(--gradient-primary);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  /* -webkit-animation: animatedGradient 30s ease infinite;
+  -moz-animation: animatedGradient 30s ease infinite;
+  -o-animation: animatedGradient 30s ease infinite;
+  animation: animatedGradient 30s ease infinite; */
+}
+
+/* section::before
 {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   display: block;
   width: 100%;
@@ -13,8 +29,8 @@ section:not(:last-of-type)::after
   /* -webkit-animation: animatedGradient 30s ease infinite;
   -moz-animation: animatedGradient 30s ease infinite;
   -o-animation: animatedGradient 30s ease infinite;
-  animation: animatedGradient 30s ease infinite; */
-}
+  animation: animatedGradient 30s ease infinite;
+} */
 
 /* @-webkit-keyframes animatedGradient
 {

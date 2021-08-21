@@ -14,8 +14,8 @@
     <title>Caitlin J. Doris Salon</title>
   </head>
   <body>
-    <header class="landing-page overlay">
-      <img src="images/logo-cjd.svg" alt="Caitlin J. Doris" class="logo"/>
+    <header class="page-header overlay">
+      <h1>meet cait</h1>
       <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta cta-assertive cta-sticky">Request a Consultation</a>
     </header>
     <details class="js-menu">
@@ -23,14 +23,26 @@
         <span>Menu</span>
       </summary>
       <nav class="nav">
-        <a href="index.html" class="nav-item active">Home</a>
+        <a href="index.html" class="nav-item">Home</a>
         <a href="services.html" class="nav-item">Services</a>
-        <a href="cait.html" class="nav-item">Team</a>
+        <a href="cait.html" class="nav-item active">Caitlin</a>
         <a href="salon.html" class="nav-item">Salon</a>
         <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
         <a href="policies.html" class="nav-item">Policies</a>
       </nav>
     </details>
+    <main class="theme-light main-content">
+      <section class="cait">
+        <div class="cait-frame">
+          <img src="images/cjd.jpeg" alt="Caitlin" class="cait-img"/>
+        </div>
+        <div class="cait-bio">
+          <p>She is great. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+        </div>
+    </section>
+    </main>
     <script>
       const menu = document.querySelector(".js-menu");
       document.addEventListener("click", function (e) {
