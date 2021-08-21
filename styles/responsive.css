@@ -29,11 +29,6 @@
     margin: var(--space-2x) 0;
   }
 
-  .services
-  {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .table-services
   {
     margin-top: var(--space-2x);
@@ -76,14 +71,6 @@
     grid-template-columns: minmax(100px, 300px) minmax(auto, 600px);
   }
 
-  .salon
-  {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    justify-content: center;
-    grid-template-columns: auto auto;
-  }
-
   .gta
   {
     display: grid;
@@ -93,7 +80,7 @@
     ;
   }
 
-  .hours
+  .mt-md-0
   {
     margin-top: 0;
   }
