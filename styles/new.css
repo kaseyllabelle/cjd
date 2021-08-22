@@ -18,6 +18,7 @@ body
   --space-lg: 0.75rem; /* 12 */
   --space-2x: 1rem; /* 16 */
   --space-3x: 1.5rem; /* 24 */
+  --space-4x: 2rem; /* 32 */
   --space-6x: 3rem; /* 48 */
   --space-12x: 6rem; /* 96 */
 
@@ -88,7 +89,7 @@ p
   background-image: url(../images/pattern.jpg);
   background-repeat: repeat;
   background-position: center;
-  background-size: 30%;
+  background-size: 50%;
   z-index: 2;
 }
 
@@ -100,7 +101,7 @@ p
   background-image: url(../images/pattern.jpg);
   background-repeat: repeat;
   background-position: center;
-  background-size: 30%;
+  background-size: 50%;
   z-index: 2;
 }
 
@@ -265,14 +266,25 @@ a:active
 .nav-social
 {
   display: flex;
+  margin-top: var(--space-2x);
 }
 
 .nav-social-item
 {
-  margin: var(--space-lg) var(--space-3x) var(--space-lg) 0;
+  width: var(--space-6x);
+  height: var(--space-6x);
   display: inline-flex;
-  color: var(--noir);
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--sorcery);
+  color: var( --noir);
   text-decoration: none;
+}
+
+.nav-social-item:nth-of-type(2)
+{
+  margin: 0 var(--space-2x);
 }
 
 .icon-social
@@ -280,8 +292,27 @@ a:active
   width: var(--space-3x);
 }
 
+.icon-social > path
+{
+  fill: var(--clear);
+}
+
 .icon-social:hover > path
 {
-  fill: var(--sorcery);
+  fill: var(--clear);
   /* http://jsfiddle.net/otaxjpa2/6/ */
+}
+
+.nav-social-item:hover,
+.nav-social-item:focus
+{
+  background: var(--gradient-primary);
+  color: var(--clear);
+  text-decoration: none;
+
+  background-size: 400% 400%;
+  -webkit-animation: animatedGradient 10s linear infinite;
+  -moz-animation: animatedGradient 10s linear infinite;
+  -o-animation: animatedGradient 10s linear infinite;
+  animation: animatedGradient 10s linear infinite;
 }
