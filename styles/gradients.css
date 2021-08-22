@@ -1,4 +1,4 @@
-header::after
+.page-header::after
 {
   content: '';
   position: absolute;
@@ -15,6 +15,16 @@ header::after
   -o-animation: animatedGradient 10s linear infinite;
   animation: animatedGradient 10s linear infinite;
 }
+
+/* .page-header::after
+{
+  background: var(--gradient-gold);
+  background-size: 1000% 1000%;
+
+  -webkit-animation: animatedGradient 10s ease infinite;
+  -moz-animation: animatedGradient 10s ease infinite;
+  animation: animatedGradient 10s ease infinite;
+} */
 
 @-webkit-keyframes animatedGradient
 {
