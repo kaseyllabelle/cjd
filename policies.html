@@ -8,55 +8,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/new.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/tables.css">
-    <link rel="stylesheet" href="styles/gradients.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <title>Caitlin J. Doris Salon Policies</title>
+    <link rel="stylesheet" href="styles/clean.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <title>Caitlin J. Doris Policies</title>
   </head>
   <body>
-    <header class="page-header overlay">
-      <h1>policies</h1>
+    <header class="page-header">
+      <span class="logo">
+        CJD
+      </span>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <svg class="menu-open js-menu-open" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+        <svg class="menu-close js-menu-close" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="#ffffff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+      </button>
     </header>
-    <details>
-      <summary aria-label="Toggle navigation">
-        <span>Menu</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-      </summary>
-      <nav class="nav">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="services.html" class="nav-item">Services</a>
-        <a href="cait.html" class="nav-item">Team</a>
-        <a href="salon.html" class="nav-item">Salon</a>
-        <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
-        <a href="policies.html" class="nav-item active">Policies</a>
-      </nav>
-    </details>
+    <nav id="menu" class="nav-on-canvas">
+      <ul>
+        <li>
+          <a href="index.html" class="nav-item">Home</a>
+        </li>
+        <li>
+          <a href="services.html" class="nav-item">Services</a>
+        </li>
+        <li>
+          <a href="team.html" class="nav-item">Team</a>
+        </li>
+        <li>
+          <a href="salon.html" class="nav-item">Salon</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="policies.html" class="nav-item active">Policies</a>
+        </li>
+      </ul>
+    </nav>
     <main class="main-content">
-      <h2>deposits</h2>
-      <p>A completed <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6">hair questionnaire</a> and a $100.00 deposit is required for all new clients to book an appointment. The deposit goes towards the services provided during your appointment.</p>
-      <p>Deposits can be paid to @caitlinjdoris via Venmo, PayPal, CashApp, Apple Pay, and Zelle. Please fill out this hair questionnaire before your appointment!</p>
-      <p>If canceled less than 24 hours before, deposit is non-refundable.</p>
-      <p>If canceled at least 24 hours before, deposit is refundable.</p>
-      <p>If rescheduled, deposit will transfer to new appointment.</p>
-      <h2>cancellations & no-shows</h2>
-      <p>No-shows and cancellations without a 24-hour notice will require a deposit to schedule a new appointment.</p>
-      <h2>late arrivals</h2>
-      <p>If you are expecting to be late to your appointment, we would appreciate a courtesy call. If you are more than 15 minutes late, we may not be able to complete your full service and/or we may ask you to reschedule.</p>
-      <h2>inclement weather</h2>
-      <p>We respect the safety of our clients and staff. The salon will be open if we are able to arrive in a safely and timely manner. In the event the salon must close, we will contact clients to reschedule as soon as possible.</p>
-      <h2>child safety</h2>
-      <p>Due to the chemicals and tools in a salon environment, we ask that all children under the age of 12 be well attended at all times by a guardian. We appreciate your understanding!</p>
-      <h2>payments</h2>
-      <p>Payment for services it due in full at the time of service. We gladly accept major credit cards. Gratuity may be added to your credit card. We appreciate your business!</p>
-      <h2>client satisfaction</h2>
-      <p>We do not issue refunds on salon services. However, if you are not satisified with the work, we will make every effort to rectify the situation at no cost to you. Please contact the salon within 7 days to schedule an appointment within 2 weeks of your original service.</p>
-      <h2>covid-19</h2>
-      <p>We are fully vaccinated. We are committed to taking necessary safety precautions and keeping clients comfortable. As guidelines are ever-changing, please contact the salon with any specific questions.</p>
+      <section>
+        <h1>policies</h1>
+        <h2>deposits</h2>
+        <p>A completed <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6">hair questionnaire</a> and a $100.00 deposit is required for all new clients to book an appointment. The deposit goes towards the services provided during your appointment.</p>
+        <p>Deposits can be paid to @caitlinjdoris via Venmo, PayPal, CashApp, Apple Pay, and Zelle. Please fill out this hair questionnaire before your appointment!</p>
+        <p>If canceled less than 24 hours before, deposit is non-refundable.</p>
+        <p>If canceled at least 24 hours before, deposit is refundable.</p>
+        <p>If rescheduled, deposit will transfer to new appointment.</p>
+        <h2>cancellations & no-shows</h2>
+        <p>No-shows and cancellations without a 24-hour notice will require a deposit to schedule a new appointment.</p>
+        <h2>late arrivals</h2>
+        <p>If you are expecting to be late to your appointment, we would appreciate a courtesy call. If you are more than 15 minutes late, we may not be able to complete your full service and/or we may ask you to reschedule.</p>
+        <h2>inclement weather</h2>
+        <p>We respect the safety of our clients and staff. The salon will be open if we are able to arrive in a safely and timely manner. In the event the salon must close, we will contact clients to reschedule as soon as possible.</p>
+        <h2>child safety</h2>
+        <p>Due to the chemicals and tools in a salon environment, we ask that all children under the age of 12 be well attended at all times by a guardian. We appreciate your understanding!</p>
+        <h2>payments</h2>
+        <p>Payment for services it due in full at the time of service. We gladly accept major credit cards. Gratuity may be added to your credit card. We appreciate your business!</p>
+        <h2>off-hours appointments</h2>
+        <p>Special requests for off-hours appointments will be accommodated whenever possible. Off-hours appointments have a service minimum of $200 (service + product sales). There is a non-refundable deposit of $100 for all off-hours appointments, which must be paid in advance to book.</p>
+        <h2>client satisfaction</h2>
+        <p>We do not issue refunds on salon services. However, if you are not satisified with the work, we will make every effort to rectify the situation at no cost to you. Please contact the salon within 7 days to schedule an appointment within 2 weeks of your original service.</p>
+        <h2>covid-19</h2>
+        <p>We are fully vaccinated. We are committed to taking necessary safety precautions and keeping clients comfortable. As guidelines are ever-changing, please contact the salon with any specific questions.</p>
+      </section>
     </main>
     <footer>
       <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta-assertive cta-sticky">Request a Consultation</a>
     </footer>
+    <script>
+      function toggleMenu() {
+        document.body.classList.toggle("js-toggle-menu");
+      }
+    </script>
   </body>
 </html>

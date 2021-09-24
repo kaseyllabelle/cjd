@@ -1,0 +1,491 @@
+/*
+  color: #d0f0dd;
+  text-shadow: 0px 0px 0 #40ff22,
+    0px 0px 4px #30ff1f,
+    0px 0px 8px #20ff1b,
+    0px 0px 16px #10ff18;
+
+  prefer glow over script
+  Jenna Sue
+  r3dg neon etsy
+*/
+
+body
+{
+  /* color */
+  --noir: #000000;
+  --clear: #ffffff;
+  --blue: #0000ff;
+  --sorcery: #4500ff;
+  --cupid: #ff0099;
+  --teal: #46e3f1;
+  --blush: #ffe6f5;
+  --gradient-primary: linear-gradient(270deg, var(--cupid), var(--sorcery));
+  --gradient-secondary: linear-gradient(270deg, var(--cupid), var(--teal));
+  /* --gradient-gold: linear-gradient(90deg, #d4af37, #aa8c2c, #ddbf5f, #aa8c2c, #d4af37); */
+
+  /* spacing scale */
+  --space-xs: 0.125rem; /* 2 */
+  --space-sm: 0.25rem; /* 4 */
+  --space-md: 0.5rem; /* 8 */
+  --space-lg: 0.75rem; /* 12 */
+  --space-2x: 1rem; /* 16 */
+  --space-3x: 1.5rem; /* 24 */
+  --space-4x: 2rem; /* 32 */
+  --space-6x: 3rem; /* 48 */
+  --space-12x: 6rem; /* 96 */
+
+  /* typography & type scale */
+  --font-family-logo: 'Style Script', cursive;
+  --font-family-heading: 'Unica One', cursive;
+  --font-family-body: 'Montserrat', sans-serif;
+  --font-weight-assertive: 600;
+  --font-weight-default: 500;
+  --font-weight-subtle: 400;
+  --fs-1: 3.375em;
+  --fs-2: 2.25em;
+  --fs-3: 1.5em;
+  --fs-body: 1em;
+  --fs-body-md: 1.125em;
+
+  background: var(--clear);
+  color: var(--noir);
+  font-family: var(--font-family-body);
+  font-size: var(--fs-body);
+  font-weight: var(--font-weight-subtle);
+  line-height: 1.5;
+}
+
+*,
+*:before,
+*:after
+{
+  box-sizing: border-box;
+}
+
+*::selection
+{
+  background: var(--sorcery);
+  color: var(--clear);
+}
+
+:focus
+{
+  outline: var(--space-xs) solid var(--sorcery);
+  outline-offset: var(--space-xs);
+}
+
+h1,
+h2,
+h3
+{
+  margin-bottom: 0;
+  font-family: var(--font-family-heading);
+  line-height: 1;
+}
+
+h1
+{
+  margin: 0;
+  font-size: var(--fs-1);
+  text-align: center;
+}
+
+h2
+{
+  margin-top: var(--space-6x);
+  font-size: var(--fs-2);
+}
+
+h3
+{
+  margin-top: var(--space-4x);
+  font-size: var(--fs-3);
+}
+
+p
+{
+  margin-top: var(--space-2x);
+  margin-bottom: 0;
+}
+
+.logo-svg
+{
+  width: 100%;
+  font-family: var(--font-family-logo);
+  font-size: var(--fs-1);
+  fill: var(--blush);
+}
+
+.logo
+{
+  margin: var(--space-2x);
+  color: var(--clear);
+  font-family: var(--font-family-heading);
+  font-size: var(--fs-1);
+}
+
+
+/* .logo
+{
+  width: 50%;
+} */
+
+/* .neon
+{
+  color: var(--blush);
+  text-shadow: 0 0 30px var(--cupid), 5px 9px 5px rgb(0 0 0 / 50%), 0 0 10px var(--cupid), 0 0 100px var(--cupid), 0 0 500px var(--cupid);
+}
+
+.stroke
+{
+  -webkit-text-stroke: 1px var(--cupid);
+	-webkit-text-fill-color: var(--blush);
+} */
+
+/* CTAs */
+
+a,
+.cta-subtle
+{
+  color: var(--sorcery);
+  font-weight: var(--font-weight-default);
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+.cta-subtle:hover,
+.cta-subtle:active
+{
+  color: var(--noir);
+  text-decoration: underline;
+}
+
+.cta-assertive
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: var(--space-2x);
+  background: var(--sorcery);
+  color: var(--clear);
+  font-weight: var(--font-weight-default);
+  letter-spacing: 0.05rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta-assertive:hover,
+.cta-assertive:focus
+{
+  background: var(--gradient-primary);
+  color: var(--clear);
+  text-decoration: none;
+
+  background-size: 400% 400%;
+  -webkit-animation: animatedGradient 10s linear infinite;
+  -moz-animation: animatedGradient 10s linear infinite;
+  -o-animation: animatedGradient 10s linear infinite;
+  animation: animatedGradient 10s linear infinite;
+}
+
+/* table */
+
+table
+{
+  width: 100%;
+  margin-top: var(--space-2x);
+  border-spacing: 0;
+  border-top: 0.063rem solid var(--noir);
+  border-bottom: 0.063rem solid var(--noir);
+}
+
+tr
+{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  vertical-align: top;
+}
+
+th
+{
+  font-weight: var(--font-weight-subtle);
+}
+
+th,
+td
+{
+  border-bottom: 0.063rem solid var(--noir);
+  padding: var(--space-sm) var(--space-lg);
+  text-align: left;
+}
+
+tr:last-child > *
+{
+  border-bottom: 0;
+}
+
+tr > *:first-child
+{
+  padding-left: 0;
+}
+
+tr > *:last-child
+{
+  padding-right: 0;
+}
+
+.table-services
+{
+  margin-top: 0;
+  border: 0;
+}
+
+.table-services tr
+{
+  grid-template-columns: none;
+  grid-template-rows: auto;
+  margin-top: var(--space-md);
+}
+
+.table-services th,
+.table-services td
+{
+  border: 0;
+  padding: 0;
+}
+
+.table-services th
+{
+  margin-top: var(--space-md);
+}
+
+.table-services td
+{
+  margin-top: var(--space-sm);
+}
+
+.table-services th
+{
+  font-weight: var(--font-weight-default);
+}
+
+@media only screen and (min-width: 768px)
+{
+  .table-services
+  {
+    margin-top: var(--space-2x);
+    border-top: 0.063rem solid var(--noir);
+    border-bottom: 0.063rem solid var(--noir);
+  }
+
+  .table-services tr
+  {
+    grid-template-columns: 2fr 3fr;
+    margin-top: 0;
+    vertical-align: top;
+  }
+
+  .table-services th,
+  .table-services td
+  {
+    margin-top: 0;
+    border-bottom: 0.063rem solid var(--noir);
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  .table-services tr:last-child > *
+  {
+    border-bottom: 0;
+  }
+
+  .table-services tr > *:first-child
+  {
+    padding-left: 0;
+  }
+
+  .table-services tr > *:last-child
+  {
+    padding-right: 0;
+  }
+}
+
+/* TEAM */
+
+.team-member
+{
+  display: grid;
+  grid-gap: var(--space-6x);
+  justify-content: center;
+  margin-top: var(--space-4x);
+}
+
+@media only screen and (min-width: 768px)
+{
+  .team-member
+  {
+    grid-template-columns: minmax(100px, 300px) minmax(auto, 600px);
+  }
+}
+
+.team-member-img-frame
+{
+  position: relative;
+}
+
+.team-member-img-frame::after
+{
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  right: 0.625rem;
+  left: -0.75rem;
+  bottom: 0.625rem;
+  border-width: var(--space-xs);
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: var(--gradient-primary);
+}
+
+.team-member-img
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SALON */
+
+.salon-location
+{
+  grid-area: location;
+}
+
+.salon-hours
+{
+  grid-area: hours;
+  /* margin-top: var(--space-6x); */
+}
+
+/* TODO: this shouldn't be a caption */
+caption
+{
+  caption-side: bottom;
+  text-align: left;
+  font-size: .75rem;
+  margin-top: var(--space-sm);
+}
+
+.salon-contact
+{
+  grid-area: contact;
+  /* margin-top: var(--space-6x); */
+}
+
+.nav-social
+{
+  display: flex;
+  margin-top: var(--space-2x);
+}
+
+.nav-social-item
+{
+  width: var(--space-6x);
+  height: var(--space-6x);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--sorcery);
+  color: var( --noir);
+  text-decoration: none;
+}
+
+.nav-social-item:nth-of-type(2)
+{
+  margin: 0 var(--space-2x);
+}
+
+.icon-social
+{
+  width: var(--space-3x);
+}
+
+.icon-social > path
+{
+  fill: var(--clear);
+}
+
+.icon-social:hover > path
+{
+  fill: var(--clear);
+  /* http://jsfiddle.net/otaxjpa2/6/ */
+}
+
+.nav-social-item:hover,
+.nav-social-item:focus
+{
+  background: var(--gradient-primary);
+  color: var(--clear);
+  text-decoration: none;
+
+  background-size: 400% 400%;
+  -webkit-animation: animatedGradient 10s linear infinite;
+  -moz-animation: animatedGradient 10s linear infinite;
+  -o-animation: animatedGradient 10s linear infinite;
+  animation: animatedGradient 10s linear infinite;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .salon
+  {
+    display: grid;
+    grid-template-areas: 
+      "location hours"
+      "contact hours"
+    ;
+  }
+
+  .salon-contact
+  {
+    align-self: end;
+  }
+
+  .mt-md-0
+  {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes animatedGradient
+{
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@-moz-keyframes animatedGradient
+{
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@-o-keyframes animatedGradient
+{
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes animatedGradient
+{
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}

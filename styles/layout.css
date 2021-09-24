@@ -1,0 +1,189 @@
+body
+{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+  margin: 0;
+}
+
+body.js-toggle-menu
+{
+  grid-template-columns: 1fr auto;
+  grid-template-areas: 
+    'header nav'
+    'main nav'
+    'footer nav';
+}
+
+.page-header
+{
+  grid-area: header;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--noir);
+}
+
+.page-header::after
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: var(--space-sm);
+  background: var(--gradient-primary);
+  background-size: 400% 400%;
+  z-index: 5;
+  -webkit-animation: animatedGradient 10s linear infinite;
+  -moz-animation: animatedGradient 10s linear infinite;
+  -o-animation: animatedGradient 10s linear infinite;
+  animation: animatedGradient 10s linear infinite;
+}
+
+.menu-toggle
+{
+  width: var(--space-6x);
+  height: var(--space-6x);
+  margin: var(--space-2x);
+  border: 0;
+  background: transparent;
+}
+
+.menu-toggle > svg
+{
+  width: 100%;
+  height: 100%;
+}
+
+.menu-close,
+.nav-on-canvas
+{
+  display: none;
+}
+
+.nav-on-canvas
+{
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.nav-on-canvas ul
+{
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.js-toggle-menu .menu-open
+{
+  display: none;
+}
+
+.js-toggle-menu .menu-close
+{
+  display: block;
+}
+
+.js-toggle-menu .nav-on-canvas
+{
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-left: 1px solid var(--noir);
+  padding: 0;
+  /* background: var(--noir); */
+  /* background: var(--clear); */
+  background: var(--gradient-primary);
+  background-size: 400% 400%;
+  overflow-y: auto;
+}
+
+.js-toggle-menu .nav-on-canvas ul
+{
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin: var(--space-4x);
+}
+
+.js-toggle-menu .nav-on-canvas ul li
+{
+  list-style-type: none;
+}
+
+.nav-item
+{
+  display: inline-flex;
+  margin: var(--space-md) 0;
+  border-bottom-width: var(--space-xs);
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  color: var(--clear);
+  /* color: var(--noir); */
+  font-size: var(--fs-3);
+  text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active,
+.nav-item.active
+{
+  /* border-color: var(--cupid); */
+  border-color: var(--clear);
+  color: var(--clear);
+  /* color: var(--noir); */
+  text-decoration: none;
+}
+
+.nav-item:focus
+{
+  outline-color: var(--cupid);
+}
+
+.main-content
+{
+  grid-area: main;
+  padding: var(--space-6x);
+  overflow-y: auto;
+}
+
+.landing-page
+{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background: var(--noir);
+}
+
+section
+{
+  display: grid;
+  grid-template-columns: minmax(auto, 60ch);
+  justify-content: center;
+  align-items: center;
+}
+
+footer
+{
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 768px)
+{
+  body.js-toggle-menu
+  {
+    grid-template-columns: 2fr 1fr;
+  }
+}

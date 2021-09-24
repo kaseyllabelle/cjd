@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/clean.css">
     <link rel="stylesheet" href="styles/layout.css">
-    <title>Caitlin J. Doris</title>
+    <title>Caitlin J. Doris Team</title>
   </head>
   <body>
     <header class="page-header">
@@ -26,13 +25,13 @@
     <nav id="menu" class="nav-on-canvas">
       <ul>
         <li>
-          <a href="index.html" class="nav-item active">Home</a>
+          <a href="index.html" class="nav-item">Home</a>
         </li>
         <li>
           <a href="services.html" class="nav-item">Services</a>
         </li>
         <li>
-          <a href="team.html" class="nav-item">Team</a>
+          <a href="team.html" class="nav-item active">Team</a>
         </li>
         <li>
           <a href="salon.html" class="nav-item">Salon</a>
@@ -45,12 +44,45 @@
         </li>
       </ul>
     </nav>
-    <main class="main-content landing-page">
-      <img src="images/logo-cjd.svg" class="landing-page-logo" alt="Caitlin J. Doris"/>
+    <main class="main-content">
+      <section>
+        <h1>team</h1>
+        <h2>caitlin</h2>
+        <div class="team-member">
+          <div class="team-member-img-frame">
+            <img src="images/cjd.jpeg" alt="Caitlin" class="team-member-img"/>
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+          </div>
+        </div>
+        <h2>megan</h2>
+        <div class="team-member">
+          <div class="team-member-img-frame">
+            <img src="images/pattern.jpg" alt="Megan" class="team-member-img"/>
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta-assertive cta-sticky">Request a Consultation</a>
     </footer>
+    <!-- <script>
+      const menu = document.querySelector(".js-menu");
+      document.addEventListener("click", function (e) {
+        var menuOpen = menu.contains(e.target);
+        if (!menuOpen) {
+          menu.removeAttribute("open");
+        }
+      });
+    </script> -->
     <script>
       function toggleMenu() {
         document.body.classList.toggle("js-toggle-menu");

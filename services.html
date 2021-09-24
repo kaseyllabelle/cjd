@@ -8,108 +8,211 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/new.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/tables.css">
-    <link rel="stylesheet" href="styles/gradients.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <title>Caitlin J. Doris Salon</title>
+    <link rel="stylesheet" href="styles/clean.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <title>Caitlin J. Doris Services</title>
   </head>
   <body>
-    <header class="page-header overlay">
-      <h1>services</h1>
+    <header class="page-header">
+      <span class="logo">
+        CJD
+      </span>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <svg class="menu-open js-menu-open" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+        <svg class="menu-close js-menu-close" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="#ffffff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+      </button>
     </header>
-    <details class="js-menu">
-      <summary aria-label="Toggle navigation">
-        <span>Menu</span>
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-      </summary>
-      <nav class="nav">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="services.html" class="nav-item active">Services</a>
-        <a href="cait.html" class="nav-item">Team</a>
-        <a href="salon.html" class="nav-item">Salon</a>
-        <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
-        <a href="policies.html" class="nav-item">Policies</a>
-      </nav>
-    </details>
+    <nav id="menu" class="nav-on-canvas">
+      <ul>
+        <li>
+          <a href="index.html" class="nav-item">Home</a>
+        </li>
+        <li>
+          <a href="services.html" class="nav-item active">Services</a>
+        </li>
+        <li>
+          <a href="team.html" class="nav-item">Team</a>
+        </li>
+        <li>
+          <a href="salon.html" class="nav-item">Salon</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/caitlinjdoris/" class="nav-item">Portfolio</a>
+        </li>
+        <li>
+          <a href="policies.html" class="nav-item">Policies</a>
+        </li>
+      </ul>
+    </nav>
     <main class="main-content">
-      <h2>hair</h2>
-      <table class="table-services">
-        <tbody>
-          <tr>
-            <th scope="row">
-              Cut
-            </th>
-            <td>
-              $$ - $$$, consultation required
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Single-process color
-            </th>
-            <td>
-              Starting at $$
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Double-process color
-            </th>
-            <td>
-              Starting at $$
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Extensions
-            </th>
-            <td>
-              Starting at $$ per hour
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>makeup</h2>
-      <table class="table-services">
-        <tbody>
-          <tr>
-            <th scope="row">
-              Full-face
-            </th>
-            <td>
-              $$ - $$$, consultation required
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Makeup lesson
-            </th>
-            <td>
-              $$ - $$$
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>bridal</h2>
-      <table class="table-services">
-        <tbody>
-          <tr>
-            <th scope="row">
-              Bridal hair & makeup
-            </th>
-            <td>
-              Starting at $$ per person, consultation required
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <section>
+        <h1>services</h1>
+        <h2>hair</h2>
+        <h3>cut</h3>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                Short cut
+              </th>
+              <td>
+                $$ - $$$, consultation required
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Long cut
+              </th>
+              <td>
+                $$ - $$$, consultation required
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>color</h3>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                Single-process color
+              </th>
+              <td>
+                Starting at $$
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Double-process color
+              </th>
+              <td>
+                Starting at $$
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>extensions</h3>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                Tape-in
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Sew-in
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>makeup</h2>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                Full-face
+              </th>
+              <td>
+                $$ - $$$, consultation required
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                Makeup lesson
+              </th>
+              <td>
+                $$ - $$$
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>bridal</h2>
+        <h3>packages</h3>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/17s4Jjqz4NPnfAcayRZX_FByB4zFMDM63NmMeW1FEN-g/edit?usp=sharing" class="cta-subtle">Bells package</a>
+              </th>
+              <td>
+                Starting at $$ per person, consultation required
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1pPqmipFuRAIqSFxj6FEovGsbdb-XIXZbJqhyEkTKdMg/edit?usp=sharing" class="cta-subtle">Whistles package</a>
+              </th>
+              <td>
+                Starting at $$ per person, consultation required
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/13SOYLHlSsTCetxWjWuhr9aXn_txX3LP6KDZo72UB9Ns/edit?usp=sharing" class="cta-subtle">Chimes package</a>
+              </th>
+              <td>
+                Starting at $$ per person, consultation required
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1RQyo1EMUZyr6IkWaY4pwH_Ob6NJpxuirs7JsyqNhnTI/edit?usp=sharing" class="cta-subtle">Groom package</a>
+              </th>
+              <td>
+                Starting at $$ per person, consultation required
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>add-ons</h3>
+        <table class="table-services">
+          <tbody>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1QcrY-LDjTS0CqS69JyWhP4wsuddWL-sY9oIuI1owWgE/edit?usp=sharing" class="cta-subtle">Boudoir</a>
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1QcrY-LDjTS0CqS69JyWhP4wsuddWL-sY9oIuI1owWgE/edit?usp=sharing" class="cta-subtle">Bachelorette</a>
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1QcrY-LDjTS0CqS69JyWhP4wsuddWL-sY9oIuI1owWgE/edit?usp=sharing" class="cta-subtle">Rehearsal</a>
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <a href="https://docs.google.com/document/d/1QcrY-LDjTS0CqS69JyWhP4wsuddWL-sY9oIuI1owWgE/edit?usp=sharing" class="cta-subtle">Extra guest</a>
+              </th>
+              <td>
+                Starting at $$ per hour
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
     <footer>
       <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" class="cta-assertive cta-sticky">Request a Consultation</a>
     </footer>
-    <script>
+    <!-- <script>
       const menu = document.querySelector(".js-menu");
       document.addEventListener("click", function (e) {
         var menuOpen = menu.contains(e.target);
@@ -117,6 +220,11 @@
           menu.removeAttribute("open");
         }
       });
+    </script> -->
+    <script>
+      function toggleMenu() {
+        document.body.classList.toggle("js-toggle-menu");
+      }
     </script>
   </body>
 </html>
