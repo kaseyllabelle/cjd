@@ -25,7 +25,7 @@
         <span class="logo">
           CJD
         </span>
-        <button data-menu-show class="cta-icon menu-toggle" aria-label="Open navigation" onclick="toggleMenu()">
+        <button type="button" class="cta-icon menu-toggle" aria-label="Open navigation" data-menu-show>
           <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
         </button>
       </header>
@@ -68,8 +68,8 @@
         <a href="https://forms.gle/E4w8yXWH2Ft7B8mT6" target="_blank" class="cta-assertive cta-sticky">Request a Consultation</a>
       </aside>
     </div>
-    <div data-menu id="menu" class="nav-on-canvas">
-      <button data-menu-hide class="cta-icon menu-toggle" aria-label="Close navigation" onclick="toggleMenu()">
+    <div id="menu" class="nav-on-canvas" data-menu>
+      <button type="button" class="cta-icon menu-toggle" aria-label="Close navigation" data-menu-hide>
         <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="#ffffff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
       </button>
       <nav>
@@ -109,23 +109,6 @@
       </nav>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/wicg-inert@3.1.1/dist/inert.min.js"></script>
-    <script>
-      function toggleMenu() {
-        document.body.classList.toggle("js-toggle-menu");
-      }
-      var container = document.querySelector('[data-container]');
-      var menu = document.querySelector('[data-menu]');
-      var showMenu = document.querySelector('[data-menu-show]');
-      var hideMenu = document.querySelector('[data-menu-hide]');
-      menu.inert = true;
-      showMenu.addEventListener('click', function() {
-        menu.inert = false;
-        container.inert = true;
-      });
-      hideMenu.addEventListener('click', function() {
-        menu.inert = true;
-        container.inert = false;
-      });
-    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
