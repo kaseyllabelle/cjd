@@ -190,11 +190,9 @@ body
 {
   border-color: var(--noir);
   background: var(--gradient-primary);
-  /* -webkit-mask-image: var(--gradient-primary); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
-  /* text-shadow: 0 0 #00000000; */
 }
 
 .nav-item:hover::selection,

@@ -91,6 +91,18 @@ h1
   text-align: center;
 }
 
+h1 span
+{
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 span::selection
+{
+  -webkit-text-fill-color: var(--clear);
+}
+
 h2
 {
   margin-top: var(--space-6x);
