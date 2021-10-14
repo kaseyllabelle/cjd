@@ -87,11 +87,12 @@ body
 {
   position: fixed;
   top: 0;
+  right: 0;
 }
 
 .menu-toggle
 {
-  align-self: end;
+  align-self: flex-end;
   margin: var(--space-4x);
 }
 
@@ -164,7 +165,8 @@ body
 
 .nav-item
 {
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: inline-block;
   margin: var(--space-2x) 0;
   border-bottom-width: var(--space-xs);
   border-bottom-style: solid;
@@ -184,9 +186,11 @@ body
 {
   border-color: var(--noir);
   background: var(--gradient-primary);
+  /* -webkit-mask-image: var(--gradient-primary); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
+  /* text-shadow: 0 0 #00000000; */
 }
 
 .nav-item:hover::selection,
