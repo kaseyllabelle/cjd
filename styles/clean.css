@@ -145,21 +145,24 @@ p
 
 /* CTAs */
 
-a,
 .cta-subtle
 {
+  border-bottom-width: var(--space-xs);
+  border-bottom-style: solid;
   color: var(--sorcery);
   font-weight: var(--font-weight-default);
   text-decoration: none;
 }
 
-a:hover,
-a:active,
 .cta-subtle:hover,
 .cta-subtle:active
 {
+  border-bottom-color: var(--noir);
   color: var(--noir);
-  text-decoration: underline;
+  text-decoration: none;
+
+  /* border-image-slice: 1;
+  border-image-source: var(--gradient-primary); */
 }
 
 .cta-assertive
@@ -176,20 +179,63 @@ a:active,
   line-height: 1;
   text-align: center;
   text-decoration: none;
+  transition: background 3s ease;
 }
 
 .cta-assertive:hover,
 .cta-assertive:focus
 {
-  background: var(--gradient-primary);
+  background: var(--cupid);
   color: var(--clear);
   text-decoration: none;
+  transition: background 3s ease;
+}
 
-  background-size: 400% 400%;
-  -webkit-animation: animatedGradient 10s linear infinite;
-  -moz-animation: animatedGradient 10s linear infinite;
-  -o-animation: animatedGradient 10s linear infinite;
-  animation: animatedGradient 10s linear infinite;
+
+.cta-icon
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--space-6x);
+  height: var(--space-6x);
+  border: 0;
+  padding: var(--space-md);
+  background: var(--sorcery);
+  color: var( --noir);
+  text-decoration: none;
+  transition: background 3s ease;
+}
+
+.cta-icon:hover
+{
+  cursor: pointer;
+}
+
+.cta-icon:hover,
+.cta-icon:focus
+{
+  background: var(--cupid);
+  color: var(--clear);
+  text-decoration: none;
+  transition: background 3s ease;
+}
+
+.cta-icon > svg
+{
+  width: var(--space-3x);
+  height: 100%;
+}
+
+.cta-icon > svg > path
+{
+  fill: var(--clear);
+}
+
+.cta-icon > svg:hover > path
+{
+  fill: var(--clear);
+  /* http://jsfiddle.net/otaxjpa2/6/ */
 }
 
 /* table */
@@ -392,52 +438,9 @@ caption
   margin-top: var(--space-2x);
 }
 
-.nav-social-item
-{
-  width: var(--space-6x);
-  height: var(--space-6x);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--space-md);
-  background: var(--sorcery);
-  color: var( --noir);
-  text-decoration: none;
-}
-
 .nav-social-item:nth-of-type(2)
 {
   margin: 0 var(--space-2x);
-}
-
-.icon-social
-{
-  width: var(--space-3x);
-}
-
-.icon-social > path
-{
-  fill: var(--clear);
-}
-
-.icon-social:hover > path
-{
-  fill: var(--clear);
-  /* http://jsfiddle.net/otaxjpa2/6/ */
-}
-
-.nav-social-item:hover,
-.nav-social-item:focus
-{
-  background: var(--gradient-primary);
-  color: var(--clear);
-  text-decoration: none;
-
-  background-size: 400% 400%;
-  -webkit-animation: animatedGradient 10s linear infinite;
-  -moz-animation: animatedGradient 10s linear infinite;
-  -o-animation: animatedGradient 10s linear infinite;
-  animation: animatedGradient 10s linear infinite;
 }
 
 @media only screen and (min-width: 768px)
