@@ -195,12 +195,19 @@ body
   text-decoration: none;
 }
 
-.nav-item:hover::selection,
-.nav-item:focus::selection,
-.nav-item:active::selection,
-.nav-item.active::selection
+.nav-item svg
 {
-  -webkit-text-fill-color: var(--clear);
+  width: var(--space-4x);
+  height: var(--space-4x);
+  transform: translateY(var(--space-sm));
+  /* margin-left: var(--space-md); */
+}
+
+.nav-item:hover svg path,
+.nav-item:focus svg path,
+.nav-item:active svg path
+{
+  fill: var(--cupid);
 }
 
 .main-content

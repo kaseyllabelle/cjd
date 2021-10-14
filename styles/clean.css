@@ -67,6 +67,7 @@ body
 {
   background: var(--sorcery);
   color: var(--clear);
+  -webkit-text-fill-color: var(--clear);
 }
 
 :focus
@@ -91,16 +92,11 @@ h1
   text-align: center;
 }
 
-h1 span
+h1 > span
 {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-h1 span::selection
-{
-  -webkit-text-fill-color: var(--clear);
 }
 
 h2
@@ -137,6 +133,10 @@ p
   font-size: var(--fs-1);
 }
 
+.transform-uppercase
+{
+  text-transform: uppercase;
+}
 
 /* .logo
 {
