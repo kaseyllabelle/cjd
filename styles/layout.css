@@ -129,16 +129,16 @@ body
 
 .js-toggle-menu .nav-on-canvas
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   padding: 0;
   background: var(--clear);
-  overflow-y: auto;
 }
 
 @media only screen and (min-width: 768px)
@@ -149,13 +149,18 @@ body
   }
 }
 
+.js-toggle-menu .nav-on-canvas nav
+{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
 .js-toggle-menu .nav-on-canvas ul
 {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: var(--space-4x);
+  padding: var(--space-4x);
 }
 
 .js-toggle-menu .nav-on-canvas ul li
@@ -165,7 +170,6 @@ body
 
 .nav-item
 {
-  /* display: inline-flex; */
   display: inline-block;
   margin: var(--space-2x) 0;
   border-bottom-width: var(--space-xs);
@@ -246,4 +250,9 @@ footer
 [data-menu][aria-hidden="true"]
 {
   display: none;
+}
+
+[data-menu-hide]
+{
+  z-index: 5;
 }
