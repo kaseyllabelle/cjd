@@ -159,10 +159,9 @@ body
 
 .logo
 {
+  width: 72px;
   margin: var(--space-2x);
   color: var(--clear);
-  font-family: var(--font-family-heading);
-  font-size: var(--fs-1);
 }
 
 .menu-toggle
@@ -475,6 +474,11 @@ tr > *:last-child
 
 @media only screen and (min-width: 768px)
 {
+  .logo
+  {
+    margin: var(--space-2x) var(--space-4x);
+  }
+
   .nav-on-canvas
   {
     width: 32rem;
