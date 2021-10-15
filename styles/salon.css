@@ -1,0 +1,58 @@
+.salon-location
+{
+  grid-area: location;
+}
+
+.salon-hours
+{
+  grid-area: hours;
+  /* margin-top: var(--space-6x); */
+}
+
+/* TODO: this shouldn't be a caption */
+caption
+{
+  caption-side: bottom;
+  text-align: left;
+  font-size: .75rem;
+  margin-top: var(--space-sm);
+}
+
+.salon-contact
+{
+  grid-area: contact;
+  /* margin-top: var(--space-6x); */
+}
+
+.nav-social
+{
+  display: flex;
+  margin-top: var(--space-2x);
+}
+
+.nav-social-link:nth-of-type(2)
+{
+  margin: 0 var(--space-2x);
+}
+
+@media only screen and (min-width: 768px)
+{
+  .salon
+  {
+    display: grid;
+    grid-template-areas: 
+      "location hours"
+      "contact hours"
+    ;
+  }
+
+  .salon-contact
+  {
+    align-self: end;
+  }
+
+  .mt-md-0
+  {
+    margin-top: 0;
+  }
+}

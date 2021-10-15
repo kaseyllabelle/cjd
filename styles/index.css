@@ -1,0 +1,47 @@
+.page-header
+{
+  justify-content: end;
+}
+
+.page-header::after
+{
+  display: none;
+}
+
+.page-header .menu-toggle
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+main
+{
+  /* display: flex;
+  justify-content: center;
+  padding: 0; */
+  background: var(--noir);
+  background-image: url(../images/home.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.sr-only
+{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px)
+{
+  main
+  {
+    /* padding: var(--space-6x); */
+    background-position: top;
+  }
+}
