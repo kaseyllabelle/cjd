@@ -173,10 +173,18 @@ body
 
 .nav-on-canvas
 {
-  display: none;
-  width: 0;
-  transition: width 1s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: var(--clear);
   z-index: 4;
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(.07, .23, .34, 1);
 }
 
 .nav
@@ -254,15 +262,7 @@ body
 
 .menu-is-open .nav-on-canvas
 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  background: var(--clear);
+  transform: translateX(0);
 }
 
 [data-menu-hide]
@@ -463,9 +463,10 @@ tr > *:last-child
 
 @media only screen and (min-width: 768px)
 {
-  .menu-is-open .nav-on-canvas
+  .nav-on-canvas
   {
     width: 32rem;
+    transform: translateX(32rem);
   }
 }
 
