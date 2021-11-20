@@ -342,7 +342,6 @@ p
   font-weight: var(--font-weight-subtle);
 }
 
-
 table
 {
   width: 100%;
@@ -368,16 +367,12 @@ tr
   vertical-align: top;
 }
 
-th
-{
-  font-weight: var(--font-weight-subtle);
-}
-
 th,
 td
 {
   border-bottom: 0.063rem solid var(--noir);
   padding: var(--space-md) var(--space-lg);
+  font-weight: var(--font-weight-default);
   text-align: left;
 }
 
@@ -394,6 +389,11 @@ tr > *:first-child
 tr > *:last-child
 {
   padding-right: 0;
+}
+
+.table-services tr
+{
+  grid-template-columns: 3fr 2fr;
 }
 
 /* global utilities */
