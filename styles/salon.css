@@ -9,15 +9,6 @@
   /* margin-top: var(--space-6x); */
 }
 
-/* TODO: this shouldn't be a caption */
-caption
-{
-  caption-side: bottom;
-  text-align: left;
-  font-size: .75rem;
-  margin-top: var(--space-sm);
-}
-
 .salon-contact
 {
   grid-area: contact;

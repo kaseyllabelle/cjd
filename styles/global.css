@@ -101,6 +101,7 @@ body
   --fs-2: 2.25em;
   --fs-3: 1.5em;
   --fs-body: 1em;
+  --fs-body-subtle: 0.75rem;
 
   /* defaults */
   position: fixed;
@@ -334,6 +335,13 @@ p
   margin-bottom: 0;
 }
 
+.subtle
+{
+  margin-top: var(--space-sm);
+  font-size: var(--fs-body-subtle);
+}
+
+
 table
 {
   width: 100%;
@@ -341,6 +349,15 @@ table
   border-spacing: 0;
   border-top: 0.063rem solid var(--noir);
   border-bottom: 0.063rem solid var(--noir);
+}
+
+/* TODO: this shouldn't be a caption */
+caption
+{
+  caption-side: bottom;
+  text-align: left;
+  font-size: .75rem;
+  margin-top: var(--space-sm);
 }
 
 tr
@@ -359,7 +376,7 @@ th,
 td
 {
   border-bottom: 0.063rem solid var(--noir);
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
   text-align: left;
 }
 
