@@ -339,6 +339,7 @@ p
 {
   margin-top: var(--space-sm);
   font-size: var(--fs-body-subtle);
+  font-weight: var(--font-weight-subtle);
 }
 
 
