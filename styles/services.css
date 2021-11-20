@@ -44,7 +44,7 @@
 
   .table-services tr
   {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
     margin-top: 0;
     vertical-align: top;
   }
