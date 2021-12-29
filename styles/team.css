@@ -34,6 +34,33 @@
   object-fit: cover;
 }
 
+.team-member-bio
+{
+  margin: 0;
+}
+
+.team-member-bio-question:not(:first-of-type)
+{
+  margin-top: var(--space-2x);
+}
+
+.team-member-bio-question::after
+{
+  content: ": ";
+}
+
+.team-member-bio-answer
+{
+  margin-left: 0;
+  font-family: var(--font-family-handwriting);
+}
+
+.team-member-bio-answer .team-member-bio-answer-list
+{
+  margin: 0;
+  padding-left: var(--space-2x);
+}
+
 @media only screen and (min-width: 768px)
 {
   .team-member

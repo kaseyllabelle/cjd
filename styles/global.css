@@ -94,6 +94,7 @@ body
   /* typography & type scale */
   --font-family-heading: 'Unica One', cursive;
   --font-family-body: 'Montserrat', sans-serif;
+  --font-family-handwriting: 'Shadows Into Light Two', cursive;
   --font-weight-assertive: 600;
   --font-weight-default: 500;
   --font-weight-subtle: 400;
