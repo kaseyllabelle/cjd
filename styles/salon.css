@@ -6,13 +6,11 @@
 .salon-hours
 {
   grid-area: hours;
-  /* margin-top: var(--space-6x); */
 }
 
 .salon-contact
 {
   grid-area: contact;
-  /* margin-top: var(--space-6x); */
 }
 
 .nav-social
@@ -33,8 +31,8 @@
     display: grid;
     grid-template-areas: 
       "location hours"
-      "contact hours"
-    ;
+      "contact hours";
+    grid-gap: var(--space-6x);
   }
 
   .salon-contact
